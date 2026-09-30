@@ -1,0 +1,18 @@
+name = "toggl-dashboard"
+main = "worker.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+preview_urls = false   # preview URLs would bypass the Access app on the main hostname
+
+[vars]
+TOGGL_UTC_OFFSET = "7"                                  # Asia/Jakarta
+ACCESS_TEAM_DOMAIN = "penk13.cloudflareaccess.com"   # Zero Trust > Settings > Custom Pages / team domain
+ACCESS_AUD = "0162857e361257e07a7e95770703f444f75c212ffc2d48a857d3345542871bce"          # Access app > Overview > Application Audience (AUD) Tag
+ALLOWED_EMAIL = "natanaelsteven109@gmail.com"                       # optional extra check on the JWT email claim
+
+# Secret (not in this file):  npx wrangler secret put TOGGL_API_TOKEN
+
+# Shared cache for Toggl data (survives Worker restarts). Code falls back to memory if unbound.
+[[kv_namespaces]]
+binding = "CACHE_KV"
+id = "342dbf79b14944e18dff7103a0b77e04"

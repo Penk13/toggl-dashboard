@@ -1,0 +1,3 @@
+# Copy to .dev.vars for `npx wrangler dev` (never commit .dev.vars)
+TOGGL_API_TOKEN=REPLACE_ME
+ALLOW_NO_ACCESS=1
