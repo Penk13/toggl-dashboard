@@ -2,7 +2,7 @@
 
 Personal Toggl Track dashboard running as a Cloudflare Worker behind Cloudflare Access.
 
-**Live:** https://toggl-dashboard.toggl-dashboard.workers.dev/ (login required)
+**Live:** https://toggl-dashboard.penk13.workers.dev/ (login required)
 
 ## Features
 - Range views (`?days=7|14|30|90`) and day view (`?day=YYYY-MM-DD`)
